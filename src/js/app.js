@@ -35,4 +35,56 @@ const news = [
  * Good luck :) 
  */
 
+//Uppgift 1.
+ document.querySelector('#ex01').textContent='done'
+
+ //Uppgift 2.
+ document.querySelector('.ex02').className ='red'
+
+ //Uppgift 3.
+ document.querySelector("blockquote").textContent='If we shouldn´t eat at night, why is there a light in the fridge?'
+
+ //Uppgift 4.
+ let ul = document.querySelector('#shopping-list')     
+ let li = document.createElement("li")     
+ li.appendChild(document.createTextNode("Milk"))    
+ ul.appendChild(li)
+
+ //Uppgift 5.
+    for (let i = 0; i < news.length; i++) {
+       let newsTemplate = document.querySelector('#news')
+       let h1 = document.createElement("h1")
+       h1.appendChild(document.createTextNode(news[i].headline))
+       newsTemplate.appendChild(h1)     
+       let p = document.createElement("p")
+       p.appendChild(document.createTextNode(news[i].author))
+       newsTemplate.appendChild(p)
+       let a = document.createElement("a")
+       a.appendChild(document.createTextNode(news[i].href))
+       newsTemplate.appendChild(a)
+       let text = document.createElement("p")
+       text.appendChild(document.createTextNode(news[i].summary))
+       newsTemplate.appendChild(text) 
+    }
+
+ //Uppgift 6. 
+ document.querySelector('body').onclick = click
+ 
+ function click() {
+     document.querySelector('#click-counter').textContent++
+ }
+ 
+ //Uppgift 7.
+ document.querySelector("button").onclick = oneClickOnly
+
+ function oneClickOnly(){
+     document.querySelector("button").disabled = true
+ }
+
+ //Uppgift 8.
+ document.querySelector('#link-to-svt').href = "#"
+
+ //Uppgift 9.
+ document.querySelector('img').src = "https://images.unsplash.com/photo-1606145469859-bd36ede24638?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+
  console.log('js loaded!')
